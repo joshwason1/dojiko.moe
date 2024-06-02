@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Dojiko</title>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.0/css/bulma.min.css">
+        <link rel="icon" type="image/x-icon" href="Cinderella.png">
+    </head>
+
+    <body>
+        <section class="hero is-primary is-medium">
+            <div class="hero-body">
+                <div class="container has-text-centered">
+                    <h1 class="title">Dojiko</h1>
+                    <p class="subtitle">Miku fan living in Australia!</p>
+                </div>
+            </div>
+        </section>
+        
+        <section class="section">
+            <div class="block">
+                <div class="content is-medium has-text-centered">
+                    <p>What is <a><strong class="has-text-info" onclick="dojikoInfo()">dojiko</strong></a>?</p>
+                    <div class="container is-max-desktop is-hidden" id="dojikoInfo">
+                        <div class="notification is-light">
+                            <button class="delete" onclick="dojikoInfo()"></button>
+                            <iframe src="https://en.wikipedia.org/wiki/Dojikko" title="Dojikko - Wikipedia" width="100%" height="400">
+                                <p>Your browser does not support iframes.</p>
+                            </iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="block">
+                <div class="container">
+                    <div class="columns">
+                        <div class="column">
+                            <a>
+                                <figure class="image" id="ai_no_utaGIF">
+                                    <img src="ai_no_uta.gif" onclick="ai_no_utaVideo()"/>
+                                </figure>
+                            </a>
+                            <div class="container is-hidden" id="ai_no_uta">
+                                <figure class="image is-16by9">
+                                    <iframe
+                                        class="has-ratio"
+                                        id="ai_no_utaVideo"
+                                        width="640"
+                                        height="360" 
+                                        title="愛の詩（V3）-初音ミク for lamazeP"
+                                        frameborder="0"
+                                        allowfullscreen
+                                        allow="autoplay"
+                                    ></iframe>
+                                </figure>
+                                <a onclick="videoHide()"> <p class="is-link">GIF</p></a>
+                            </div>
+                        </div>
+                        <div class="column">
+                            <div class="content has-text-centered">
+                                <div class="block">
+                                    <h2>Socials</h2>
+                                </div>
+                                <div class="block">
+                                    <nav class="level is-mobile">
+                                        <div class="level-item">
+                                            <figure class="image is-48x48">
+                                                <a href="https://anilist.co/user/Dojiko/">
+                                                    <img class="is-rounded" src="AniList_logo.svg" />
+                                                </a>
+                                            </figure>
+                                        </div>
+                                        <div class="level-item">
+                                            <figure class="image is-48x48">
+                                                <a href="https://steamcommunity.com/id/Dojiko/">
+                                                    <img class="is-rounded" src="Steam_logo.svg" />
+                                                </a>
+                                            </figure>
+                                        </div>
+                                    </nav>
+                                </div>
+                                <div class="block">
+                                    <div class="content has-text-centered is-medium">
+                                        <p class="mt-4">Miku is best girl!</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+     </body>
+
+    <footer class="footer">
+        <div class="content has-text-centered">
+            <p>Site created by Dojiko using the <a href="https://bulma.io/">Bulma CSS Framework</a></p>
+        </div>
+    </footer>
+
+    <script>
+        function dojikoInfo() {
+            var popup = document.getElementById("dojikoInfo");
+            popup.classList.toggle("is-hidden");
+        }
+
+        function ai_no_utaVideo() {
+            document.getElementById("ai_no_uta").classList.toggle("is-hidden");
+            document.getElementById("ai_no_utaGIF").classList.toggle("is-hidden");
+            document.getElementById("ai_no_utaVideo").src = "https://www.youtube.com/embed/E2oRrLUxWKo?autoplay=1";
+        }
+
+        function videoHide() {
+            document.getElementById("ai_no_uta").classList.toggle("is-hidden");
+            document.getElementById("ai_no_utaGIF").classList.toggle("is-hidden");
+            document.getElementById("ai_no_utaVideo").src = "https://www.youtube.com/embed/E2oRrLUxWKo";
+        }
+    </script>
+</html>
